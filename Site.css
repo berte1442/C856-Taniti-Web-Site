@@ -63,8 +63,11 @@ textarea {
   color: white;
 }
 
-.center{
-
-  margin: auto;
-vertical-align: middle;
+#homepage {
+   background-image: url("sandy-beach-with-rocks.jpg");
+    opacity: 0.2;
+       
+}
+.opacitynone{
+    opacity: 1;
 }
