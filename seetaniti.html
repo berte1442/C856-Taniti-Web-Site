@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="Site.css">
           <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
     crossorigin="anonymous">
+        <script type="text/javascript" src="scripts.js"></script>
 </head>
 <body style="background-image: url(palmtree-and-sandy-beach-filtered.jpg)">
 <nav class="navbar sticky-top navbar-dark bg-light">
@@ -29,5 +30,89 @@
                   </center>
             </div>
         </nav>
+        <div>
+             <center>
+                  <h1 style="padding-top: 5%; color: white">See The Island of Taniti</h1>
+              </center>
+        </div>
+            <div class="row">
+              <div class="col-sm" style="padding-top: 5%; padding-left: 5%; padding-right: 5%;">
+                    <div><!---->
+                    <a id="boy-with-shark" class="pictures">  <!-- href="enlargeimage.html" -->
+                     <img id="boy-shark" src="local-boy-holding-shark.jpg" alt="Boy holding shark" width="300" height="200" style="box-shadow: 5px 10px;" onclick="DisplayImage(id)">
+                     </a>
+                     </div>
+                     <p style="font-weight: bold; color: white; padding-top: 5px;">History of the locals below</p>
+
+              </div>
+              <div class="col-sm" style="padding-top: 5%; padding-left: 5%; padding-right: 5%;">
+                    <div>
+                    <a id="helicopter-over-island" class="pictures">
+                     <img id="helicopter" src="helicopter-over-island.jpg" alt="Man holding fish" width="300" height="200" style="box-shadow: 5px 10px;">
+                        </a>
+                     </div>
+                     <p style="font-weight: bold; color: white; padding-top: 5px;">Information about helicopter rides</p>
+            </div>
+
+              <div class="col-sm" style="padding-top: 5%; padding-left: 5%; padding-right: 5%;">
+                    <div>
+                    <a id="volcano" class="pictures">
+                     <img id="volcano-erupting" src="valcano-erupting.jpg" alt="Volcano" width="300" height="200" style="box-shadow: 5px 10px;">
+                        </a>
+                     </div>
+                     <p style="font-weight: bold; color: white; padding-top: 5px;">Information about the volcano on the island</p>
+            </div>
+    </div>
+        <div class="row">
+              <div class="col-sm" style="padding-top: 5%; padding-left: 5%; padding-right: 5%;">
+                    <div>
+                    <a id="pub" class="pictures">
+                     <img id="local-pub" src="local-pub.jpg" alt="Local Pub" width="300" height="200" style="box-shadow: 5px 10px;" >
+                     </a>
+                     </div>
+                     <p style="font-weight: bold; color: white; padding-top: 5px;">Information about local bars</p>
+
+              </div>
+              <div class="col-sm" style="padding-top: 5%; padding-left: 5%; padding-right: 5%;">
+                    <div>
+                    <a id="harbor" class="pictures">
+                     <img id="tropical-harbor" src="tropical-harbor.jpg" alt="Man holding fish" width="300" height="200" style="box-shadow: 5px 10px;">
+                        </a>
+                     </div>
+                     <p style="font-weight: bold; color: white; padding-top: 5px;">Information about the harbor</p>
+            </div>
+
+              <div class="col-sm" style="padding-top: 5%; padding-left: 5%; padding-right: 5%;">
+                    <div>
+                    <a id="club" class="pictures">
+                     <img id="night-club" src="night-club.jpg" alt="Night Club" width="300" height="200" style="box-shadow: 5px 10px;">
+                        </a>
+                     </div>
+                     <p style="font-weight: bold; color: white; padding-top: 5px;">Information about Night Life</p>
+            </div>
+    </div>
+<script>
+    var h= screen.height;
+var w= screen.width;
+document.getElementById('boy-shark').onclick=function(){
+window.open('local-boy-holding-shark.jpg', '_blank' , 'width='+w+', height='+h+'');
+}
+document.getElementById('helicopter').onclick=function(){
+window.open('helicopter-over-island.jpg', '_blank' , 'width='+w+', height='+h+'');
+}
+document.getElementById('volcano-erupting').onclick=function(){
+window.open('valcano-erupting.jpg', '_blank' , 'width='+w+', height='+h+'');
+}
+document.getElementById('local-pub').onclick=function(){
+window.open('local-pub.jpg', '_blank' , 'width='+w+', height='+h+'');
+}
+document.getElementById('tropical-harbor').onclick=function(){
+window.open('tropical-harbor.jpg', '_blank' , 'width='+w+', height='+h+'');
+}
+document.getElementById('night-club').onclick=function(){
+window.open('night-club.jpg', '_blank' , 'width='+w+', height='+h+'');
+}
+
+    </script>
 </body>
 </html>
