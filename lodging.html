@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="Site.css">
           <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
     crossorigin="anonymous">
+
 </head>
 <body style="background-image: url(palmtree-and-sandy-beach-filtered.jpg)">
 <nav class="navbar sticky-top navbar-dark bg-light">
@@ -35,18 +36,18 @@
          <div class="row">
               <div class="col-sm" style="padding-top: 5%; padding-left: 5%; padding-right: 5%;">
                   <p style="font-size: 24px; font-weight: bold; color:white">Select your lodging preference</p>
-                  <form>
+                  <form id="radioBtn">
                       <input type="radio" id="hostel" name="lodge" value="hostel">
                       <label for="hostel" style="color:white; font-weight:bold">Hostel</label><br>
                       <input type="radio" id="hotel" name="lodge" value="hotel">
                       <label for="hotel" style="color:white; font-weight:bold">Hotel</label><br>
                       <input type="radio" id="resort" name="lodge" value="resort">
                       <label for="resort" style="color:white; font-weight:bold">Resort</label>
-                      <div class="container">
-  <form action="action_page.php">
+    <div class="container">
+    <form action="action_page.php">
     <div class="row">
       <div class="col-25">
-        <label for="fname" style="color:white; font-weight: bold;">First Name</label>
+        <label for="fname" style="color:black; font-weight: bold;">First Name</label>
       </div>
       <div class="col-75">
         <input type="text" id="fname" name="firstname" placeholder="Your name..">
@@ -54,7 +55,7 @@
     </div>
     <div class="row">
       <div class="col-25">
-        <label for="lname" style="color:white; font-weight: bold">Last Name</label>
+        <label for="lname" style="color:black; font-weight: bold">Last Name</label>
       </div>
       <div class="col-75">
         <input type="text" id="lname" name="lastname" placeholder="Your last name..">
@@ -62,7 +63,7 @@
     </div>
     <div class="row">
       <div class="col-25">
-        <label for="country" style="color:white; font-weight: bold">Country</label>
+        <label for="country" style="color:black; font-weight: bold">Country</label>
       </div>
       <div class="col-75">
         <select id="country" name="country">
@@ -76,24 +77,119 @@
     </div>
     <div class="row">
       <div class="col-25">
-        <label for="subject">Subject</label>
+        <label for="start-date" style="color:black; font-weight: bold">Vacation Start Date</label>
       </div>
       <div class="col-75">
-        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+        <input type="date" id="start-date" name="start-date">
       </div>
-    </div>
+      </div>
+          <div class="row">
+      <div class="col-25">
+        <label for="start-date" style="color:black; font-weight: bold">Vacation End Date</label>
+      </div>
+      <div class="col-75">
+        <input type="date" id="end-date" name="end-date">
+      </div>
+      </div>
     <div class="row">
-      <input type="submit" value="Submit">
+      <input type="button" value="Submit" onclick="lodgeInfo()">,
     </div>
-  </form>
+   </form>
+  </div>
+ </form>
 </div>
-                  </form>
-              </div>
-              <div class="col-sm" style="padding-top: 5%;">
-                  <p style="font-size: 24px; font-weight: bold; color: white">Explore your lodging options on Taniti</p>
-                  <p id="lodge-content" style="color:white; font-weight: bold;">With a variety of lodging options available on the island, 
-                  there a place for everyone no matter their budget.</p>
-              </div>
-            </div>
+<div class="col-sm" style="padding-top: 5%;">
+  <p style="font-size: 24px; font-weight: bold; color: white">Explore your lodging options on Taniti</p>
+  <p id="lodge-content" style="color:white; font-weight: bold;">With a variety of lodging options available on the island, 
+  there a place for everyone no matter their budget.</p><br>
+  <img id="lodge-img-1"><br>
+  <p id="caption1" style="font-weight: bold; color: white"></p><br>
+  <img id="lodge-img-2"><br>
+  <p id="caption2" style="font-weight: bold; color: white"></p><br>
+  <img id="lodge-img-3"><br>
+  <p id="caption3" style="font-weight: bold; color: white"></p><br>
+  <p id="price" style="font-weight: bold; color: white"></p>
+</div>
+</div>
+<script>
+    function lodgeInfo(){
+    var fname = document.getElementById('fname').value;
+    var lname = document.getElementById('lname').value;
+    var country = document.getElementById('country').value;
+    var startDate = document.getElementById('start-date').value;
+    var endDate = document.getElementById('end-date').value;
+            
+    var hotelType = document.getElementsByName('lodge');
+    var lodgePrice;
+    var lodgeSelection;
+    var lodgeString = 'Hello ' + fname + ' ' + lname + '. ';
+                        
+    for (var i = 0, length = hotelType.length; i < length; i++) {
+          if (hotelType[i].checked) {
+            lodgeSelection = hotelType[i].value;
+            break;
+          }
+        }
+    if(lodgeSelection == null){
+        //code message to complete form
+    }   
+    else{
+        // adds styling to images
+        document.getElementById('lodge-img-1').style = "box-shadow: 5px 10px black";
+        document.getElementById('lodge-img-1').width= "300";
+        document.getElementById('lodge-img-1').height= "200";
+        
+        document.getElementById('lodge-img-2').style = "box-shadow: 5px 10px black";
+        document.getElementById('lodge-img-2').width= "300";
+        document.getElementById('lodge-img-2').height= "200";
+        
+        document.getElementById('lodge-img-3').style = "box-shadow: 5px 10px black";
+        document.getElementById('lodge-img-3').width= "300";
+        document.getElementById('lodge-img-3').height= "200";
+        
+        
+        
+        if(lodgeSelection.toLowerCase() == 'hostel'){
+            lodgeString += 'Taniti has an inexpensive hostel if you are hoping to save on your budget. '
+            document.getElementById('lodge-img-1').src = 'hostel.jpg';
+            document.getElementById('caption1').innerHTML = 'Comfortable Beds';
+            document.getElementById('lodge-img-2').src = 'hostel-cabinets.jpg';
+            document.getElementById('caption2').innerHTML = 'Plenty of storage for your luggage'
+            document.getElementById('lodge-img-3').src = 'hostel-kitchen.jpg';
+            document.getElementById('caption3').innerHTML = 'Accomodating dining area'
+            document.getElementById('price').innerHTML = 'Prices starting at $100 a night'
+
+            lodgePrice = 100.00;
+        }
+        else if(lodgeSelection.toLowerCase() == 'hotel'){
+            lodgeString += 'Taniti has many hotels to choose from. '
+            document.getElementById('lodge-img-1').src = 'hotel-interior.jpg';
+            document.getElementById('caption1').innerHTML = 'Comfortable Beds';
+            document.getElementById('lodge-img-2').src = 'hotel-pool.jpg';
+            document.getElementById('caption2').innerHTML = 'Multi-Family Size Pools'
+            document.getElementById('lodge-img-3').src = 'hotel-room-service.jpg';
+            document.getElementById('caption3').innerHTML = 'Room Service Available'
+            document.getElementById('price').innerHTML = 'Prices starting at $200 a night'
+
+            lodgePrice = 200.00;
+        } 
+        else if(lodgeSelection.toLowerCase() == 'resort'){
+            lodgeString += 'Taniti has a 4 star Resort located right next to the water. '
+            document.getElementById('lodge-img-1').src = 'resort-1.jpg';
+            document.getElementById('caption1').innerHTML = 'Amazing Rooms Right on the Water';
+            document.getElementById('lodge-img-2').src = 'resort-3.jpg';
+            document.getElementById('caption2').innerHTML = 'Large Heated Swimming Pools'
+            document.getElementById('lodge-img-3').src = 'tropical-resort-bedroom.jpg';
+            document.getElementById('caption3').innerHTML = 'Luxurious Suites'
+            document.getElementById('price').innerHTML = 'Prices starting at $400 a night'
+
+            lodgePrice = 400.00;
+        }
+    }
+                        
+    console.log(lodgeSelection);
+                        
+        
+}</script>
 </body>
 </html>
