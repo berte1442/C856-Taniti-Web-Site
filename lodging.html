@@ -7,7 +7,7 @@
           <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
     crossorigin="anonymous">
 </head>
-<body>
+<body style="background-image: url(palmtree-and-sandy-beach-filtered.jpg)">
 <nav class="navbar sticky-top navbar-dark bg-light">
             <div class="container">
                <a class="text-dark" href="index.html">Taniti</a>
@@ -29,5 +29,71 @@
                   </center>
             </div>
         </nav>
+        <center>
+            <h1 style="padding-top: 5%; color: white">Where Will You Be Staying?</h1>
+        </center>
+         <div class="row">
+              <div class="col-sm" style="padding-top: 5%; padding-left: 5%; padding-right: 5%;">
+                  <p style="font-size: 24px; font-weight: bold; color:white">Select your lodging preference</p>
+                  <form>
+                      <input type="radio" id="hostel" name="lodge" value="hostel">
+                      <label for="hostel" style="color:white; font-weight:bold">Hostel</label><br>
+                      <input type="radio" id="hotel" name="lodge" value="hotel">
+                      <label for="hotel" style="color:white; font-weight:bold">Hotel</label><br>
+                      <input type="radio" id="resort" name="lodge" value="resort">
+                      <label for="resort" style="color:white; font-weight:bold">Resort</label>
+                      <div class="container">
+  <form action="action_page.php">
+    <div class="row">
+      <div class="col-25">
+        <label for="fname" style="color:white; font-weight: bold;">First Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="lname" style="color:white; font-weight: bold">Last Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="country" style="color:white; font-weight: bold">Country</label>
+      </div>
+      <div class="col-75">
+        <select id="country" name="country">
+          <option value="canada">Canada</option>
+          <option value="japan">Japan</option>
+          <option value="mexico">Mexico</option>
+          <option value="spain">Spain</option>
+          <option value="usa">USA</option>
+         </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="subject">Subject</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+</div>
+                  </form>
+              </div>
+              <div class="col-sm" style="padding-top: 5%;">
+                  <p style="font-size: 24px; font-weight: bold; color: white">Explore your lodging options on Taniti</p>
+                  <p id="lodge-content" style="color:white; font-weight: bold;">With a variety of lodging options available on the island, 
+                  there a place for everyone no matter their budget.</p>
+              </div>
+            </div>
 </body>
 </html>
