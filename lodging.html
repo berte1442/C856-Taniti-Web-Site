@@ -15,11 +15,11 @@
 <body style="background-image: url(palmtree-and-sandy-beach-filtered.jpg)">
 <nav class="navbar sticky-top navbar-dark bg-light">
             <div class="container">
-               <a class="text-dark" href="index.html">Taniti</a>
+               <a class="text-dark" href="index.html">Home</a>
                    <center>
                      <ul class="nav nav-pills">
                         <li class="nav-item" style="margin: 2px 30px 2px 30px;">
-                            <a class="text-dark" href="sites.html">Sites</a>
+                            <a class="text-dark" href="thingstodo.html">Things To Do</a>
                         </li>
                         <li class="nav-item" style="margin: 2px 30px 2px 30px;">
                              <a class="text-dark" href="travel.html">Travel</a>
@@ -29,6 +29,9 @@
                         </li>
                         <li class="nav-item" style="margin: 2px 30px 2px 30px;">
                              <a class="text-dark" href="seetaniti.html">See Taniti</a>
+                        </li>
+                         <li class="nav-item" style="margin: 2px 30px 2px 30px;">
+                             <a class="text-dark" href="contact.html">Contact</a>
                         </li>
                      </ul>
                   </center>
@@ -46,7 +49,10 @@
                       <input type="radio" id="hotel" name="lodge" value="hotel">
                       <label for="hotel" style="color:white; font-weight:bold">Hotel</label><br>
                       <input type="radio" id="resort" name="lodge" value="resort">
-                      <label for="resort" style="color:white; font-weight:bold">Resort</label>
+                      <label for="resort" style="color:white; font-weight:bold">Resort</label><br>
+                      <div class="row">
+                       <input type="button" value="Show Info" onclick="lodgeInfo()">
+                      </div><br>
     <div class="container">
     <form action="action_page.php">
     <div class="row">
@@ -96,7 +102,7 @@
       </div>
       </div>
     <div class="row">
-      <input type="button" value="Submit" onclick="lodgeInfo()">,
+      <input type="button" value="Submit">,
     </div>
    </form>
   </div>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+        <link rel="stylesheet" href="Site.css">
+      <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body style="background-image: url(palmtree-and-sandy-beach-filtered.jpg)">
+<nav class="navbar sticky-top navbar-dark bg-light">
+            <div class="container">
+               <a class="text-dark" href="index.html">Home</a>
+                   <center>
+                     <ul class="nav nav-pills">
+                        <li class="nav-item" style="margin: 2px 30px 2px 30px;">
+                            <a class="text-dark" href="thingstodo.html">Things To Do</a>
+                        </li>
+                        <li class="nav-item" style="margin: 2px 30px 2px 30px;">
+                             <a class="text-dark" href="travel.html">Travel</a>
+                        </li>
+                        <li class="nav-item" style="margin: 2px 30px 2px 30px;">
+                             <a class="text-dark" href="lodging.html">Lodging</a>
+                        </li>
+                        <li class="nav-item" style="margin: 2px 30px 2px 30px;">
+                             <a class="text-dark" href="seetaniti.html">See Taniti</a>
+                        </li>
+                        <li class="nav-item" style="margin: 2px 30px 2px 30px;">
+                             <a class="text-dark" href="contact.html">Contact</a>
+                        </li>
+                     </ul>
+                  </center>
+            </div>
+        </nav>
+        <div class="container">
+        <p style="font-weight:bold;"> You can call us at 555-555-5555 or submit your message below and we'll respond as soon as possible.</p>
+        <form action="action_page.php">
+        <center>
+    <div class="row">
+      <div class="col-25">
+        <label for="fname" style="color:black; font-weight: bold;">First Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="lname" style="color:black; font-weight: bold">Last Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      </div>
+    </div> 
+        <div class="row">
+      <div class="col-25">
+        <label for="email" style="color:black; font-weight: bold">Email</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="email" name="email" placeholder="email address..">
+      </div>
+    </div> 
+        <div class="row">
+      <div class="col-25">
+        <label for="message" style="color:black; font-weight: bold">Message</label>
+      </div>
+      <div class="col-75">
+          <textarea type="text" id="message" name="message" placeholder="Write your message here.." ></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <input type="button" value="Submit">
+    </div>
+    </center>
+   </form>
+    </div>
+    <script>
+        
+        // consider writing script to clear text bodes once submit is hit
+        // also consider adding alert that says message sent
+    </script>
+    </body>
+</html>
